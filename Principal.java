@@ -35,7 +35,7 @@ public class Principal  //Declaracion de la clase Principal
         
         // 2. Realizar calculos
         // cantidad de viajes necesarios
-        viajenec = Ktransporte / Kviaje;
+        viajenec = Math.ceil(Ktransporte / Kviaje);
         int iviajenec = (int)viajenec; // Poder convertir la variable de double a entero
         
         // Consumo de combustible del camion (camion pesado de 2 ejes)
@@ -43,6 +43,7 @@ public class Principal  //Declaracion de la clase Principal
         
         //Precio gasolina
         costo_gasolina = (galones_viaje * Pgasolina) * iviajenec;
+        int icosto_gasolina = (int)costo_gasolina;
        
        
        
@@ -50,7 +51,7 @@ public class Principal  //Declaracion de la clase Principal
        // 3. Mostrar datos de salida
         System.out.println("Cantidad de viajes" + iviajenec);
         System.out.println("Galones que gasta por viaje" + galones_viaje);
-        System.out.println("Costo del combustible $" + costo_gasolina);
+        System.out.println("Costo del combustible $" + icosto_gasolina);
                                  
       
          
